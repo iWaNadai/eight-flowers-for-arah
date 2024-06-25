@@ -10,16 +10,19 @@ const MESSAGE_INDEX = DAY_DIFFERENCE % 8;
 const CONTAINER = document.querySelector('#Container');
 const IMAGE = document.querySelector('#Background');
 //set environment
-const WORD = ['eight', 'one', 'two', 'three', 'four', 'five', 'six', 'seven'][MESSAGE_INDEX];
-const NUMBER = ['8', '1', '2', '3', '4', '5', '6', '7'][MESSAGE_INDEX];
+const WORD = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'][MESSAGE_INDEX];
+const NUMBER = ['1','2','3','4','5','6','7','8'][MESSAGE_INDEX];
 
-['eight', 'one', 'two', 'three', 'four', 'five', 'six', 'seven']
+['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']
     .forEach(word => {
         if (word === WORD) {
-            CONTAINER.classList.add(WORD)
+            CONTAINER.classList.add(WORD);
+            IMAGE.classList.add(WORD)
             return
         }
         CONTAINER.classList.remove(word);
+        IMAGE.classList.remove(word)
+
     })
 IMAGE.src = `./images/${NUMBER}.JPG`;
 
