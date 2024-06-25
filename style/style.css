@@ -13,9 +13,9 @@
 
 .container {
     width: auto;
-    height: 100vh;
-    max-width: 100vw;
-    max-height: 100vh;
+    height: 100svh;
+    max-width: 100svw;
+    max-height: 100svh;
     overflow: hidden;
     text-align: center;
     position: relative;
@@ -47,12 +47,16 @@
 
     & img {
         height: auto;
-        min-height: 100vh;
+        min-height: 100svh;
         width: 100%;
         position: relative;
 
         /* Large || Desktop */
         @media only screen and (min-width: 769px) {
+            &.one {
+                top: -25%;
+            }
+
             &.four {
                 top: -75%;
             }
@@ -150,14 +154,15 @@
         /* Small || Mobile */
         @media only screen and (max-width: 480px) {
             &.one {
-                top: 4rem;
+                top: 6rem;
             }
 
             &.four {
-                top: 7rem;
+                top: 9.5rem;
                 text-align: left;
                 transform: translateX(0%);
-                left: 1rem
+                left: .5rem;
+                font-size: max(6vw, 2.2rem);
             }
 
             &.five {
